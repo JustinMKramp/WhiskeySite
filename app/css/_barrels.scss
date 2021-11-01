@@ -1,0 +1,22 @@
+.barrels {
+	background-image: url(/app/img/barrels2.jpg);
+	background-size: cover;
+}
+.myText {
+	width: 500px;
+	font-size: 1rem;
+	color: gray;
+	background-color: #eee;
+	padding: 8px 24px;
+	margin-bottom: 80px;
+	border-radius: 16px;
+}
+@media screen and (max-width: 810px) {
+	.barrels {
+		background-size: cover;
+	}
+	.myText {
+		font-size: 0.75rem;
+		width: 300px;
+	}
+}

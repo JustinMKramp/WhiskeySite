@@ -1,0 +1,59 @@
+.pouring {
+	background-image: url(/app/img/pouring.jpg);
+	background-size: cover;
+	// background-attachment: fixed;
+	overflow: hidden;
+	display: flex;
+	h1 {
+		font-size: 8rem;
+	}
+	p {
+		color: #ffe7e7;
+		font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+		font-size: 1.5rem;
+		width: 25rem;
+		position: relative;
+		top: -10vw;
+		left: 20vw;
+	}
+	.four {
+		position: relative;
+		top: -40vh;
+		left: 20vw;
+	}
+}
+@media screen and (max-width: 810px) {
+	.pouring {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		p {
+			bottom: 90vh;
+			left: 50vw;
+			width: 20rem;
+			font-size: 1.5rem;
+			position: sticky;
+		}
+		.four {
+			top: 0;
+			right: 10vw;
+		}
+	}
+}
+@media screen and (max-width: 500px) {
+	.pouring {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		p {
+			top: 0;
+			left: 0;
+			width: 20rem;
+			font-size: 1.5rem;
+		}
+		.four {
+			top: 0;
+			left: 0;
+		}
+	}
+}
