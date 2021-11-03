@@ -1,3 +1,4 @@
+@import "mixins";
 * {
 	border: 0;
 	padding: 0;
@@ -48,5 +49,28 @@ a {
 	}
 	&-ai-c {
 		align-items: center;
+	}
+}
+// Visibility
+.hide-for-mobile {
+	@include breakpoint-down(small) {
+		display: none;
+	}
+}
+.hide-for-tablet {
+	@include breakpoint-down(medium) {
+		display: none;
+	}
+}
+
+.hide-for-desktop {
+	@include breakpoint-up(medium) {
+		display: none;
+	}
+}
+
+.expand-for-tablet {
+	@include breakpoint-down(large) {
+		flex-wrap: wrap;
 	}
 }

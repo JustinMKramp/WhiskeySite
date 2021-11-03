@@ -1,0 +1,74 @@
+#age-gate {
+	overflow: auto;
+}
+#age-overlay {
+	opacity: 0;
+	background-color: #000;
+	background-repeat: repeat;
+}
+#age-content {
+	width: 50vw;
+	max-width: 600px;
+	height: 600px;
+	margin-top: 90px;
+	position: relative;
+	background-color: #2b2b6f;
+	border-radius: 5px;
+	padding: 1em;
+	border: 1px solid silver;
+}
+.form1 {
+	height: 600px;
+}
+.age-logo {
+	width: 100%;
+	img {
+		width: 70%;
+		height: 70%;
+	}
+}
+.please {
+	font-size: 2.5rem;
+	font-weight: 700;
+	font-family: cursive;
+	color: silver;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.responsible {
+	font-size: 0.75rem;
+	color: silver;
+	margin-bottom: 10px;
+}
+.line {
+	height: 1px;
+	background: silver none repeat scroll 0% 0%;
+}
+.birth-text {
+	font-size: 1.5rem;
+	font-weight: 700;
+	font-family: cursive;
+	color: silver;
+	margin: 25px 0 10px 0;
+}
+.age-picker {
+	margin: 0 5px;
+}
+.submitBtn {
+	margin-top: 20px;
+	padding: 18px;
+
+	.submit {
+		width: 160px;
+		font-size: 2rem;
+		font-family: serif;
+		background: silver;
+		color: white;
+		border-radius: 3px;
+	}
+}
+@include breakpoint-down(medium) {
+	#age-content {
+		width: 90vw;
+	}
+}
