@@ -1,87 +1,3 @@
-// ////////age verification
-// $(document).ready(function () {
-// 	var age = {};
-
-// 	initAge();
-
-// 	function initAge() {
-// 		var month = 0;
-// 		var day = 0;
-// 		var year = 0;
-
-// 		$(".submit").on("click", function () {
-// 			age["month"] = $("#age-select-month").val();
-// 			age["day"] = $("#age-select--day").val();
-// 			age["year"] = $("#age-select-year").val();
-// 			checkDate();
-// 		});
-// 	}
-
-// 	// Check to see if user entered a valid date...
-// 	function checkDate() {
-// 		if (age.month == "none" || age.day == "none" || age.year == "none") {
-// 			alert("please try again");
-
-// 			// changes the background color of the select if invalid
-// 			if (age.month == "none") {
-// 				$("#age-select-month").css("background", "rgba(223,32,44,0.5)");
-// 				// Look for change of value and change background color when valid
-// 				$("#age-select-month").on("change", function () {
-// 					if ($("#age-select-month").val() == "none") {
-// 						$("#age-select-month").css("background", "rgba(223,32,44,0.5)");
-// 					} else {
-// 						$("#age-select-month").css("background", "white");
-// 					}
-// 				});
-// 			}
-
-// 			// changes the background color of the select if invalid
-// 			if (age.day == "none") {
-// 				$("#age-select-day").css("background", "rgba(223,32,44,0.5)");
-// 				// Look for change of value and change background color when valid
-// 				$("#age-select-day").on("change", function () {
-// 					if ($("#age-select-day").val() == "none") {
-// 						$("#age-select-day").css("background", "rgba(223,32,44,0.5)");
-// 					} else {
-// 						$("#age-select-day").css("background", "white");
-// 					}
-// 				});
-// 			}
-
-// 			// changes the background color of the select if invalid
-// 			if (age.year == "none") {
-// 				$("#age-select-year").css("background", "rgba(223,32,44,0.5)");
-// 				// Look for change of value and change background color when valid
-// 				$("#age-select-year").on("change", function () {
-// 					if ($("#age-select-year").val() == "none") {
-// 						$("#age-select-year").css("background", "rgba(223,32,44,0.5)");
-// 					} else {
-// 						$("#age-select-year").css("background", "white");
-// 					}
-// 				});
-// 			}
-// 		} else {
-// 			oldEnough();
-// 		}
-// 	}
-
-// 	// Compares age entered with todays date 21 years ago...
-// 	function oldEnough() {
-// 		var ageLimit = moment().subtract(21, "years").calendar();
-// 		var birthDate = age.month + " " + age.day + " " + age.year;
-// 		var oldEnough = moment(birthDate, "MM DD YYYY").isBefore(ageLimit, "day");
-// 		////////////////////////////////////////////////////////////////
-// 		if (oldEnough) {
-// 			//cookie.set('validAge', 'true');
-// 			$("#age-gate").css("display", "none");
-// 			$("body").removeClass("noscroll");
-// 		} else {
-// 			//cookie.set('validAge', 'false');
-// 			alert("it is false");
-// 		}
-// 	}
-// });
-
 $(document).ready(function () {
 	jQuery.validator.addMethod(
 		"twentyone",
@@ -109,21 +25,22 @@ $(document).ready(function () {
 				return true;
 			}
 		},
-		"You must verify that you are 21 years old."
+		"You must be 21 years old."
 	);
 
 	$("form").validate({
 		rules: {
-			"age-select-month": "required",
-			"age-select-day": "required",
-			"age-select-year": {
+			month: "required",
+			day: "required",
+			year: {
 				required: true,
 				twentyone: true,
 			},
 		},
 		submitHandler: function (form) {
-			// form.submit();
-			alert("Success! You are over 21.");
+			$("#age-gate").css("display", "none");
+			$("body").removeClass("noscroll");
+			$("#btnBurger").css("pointer-events", "auto");
 		},
 	});
 });
