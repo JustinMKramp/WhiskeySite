@@ -82,6 +82,11 @@
 			font-weight: 600;
 			padding: 0.625rem;
 			text-align: center;
+			transition: all 0.3s;
+			&:hover {
+				opacity: 0.7;
+				font-size: 1.5rem;
+			}
 		}
 	}
 

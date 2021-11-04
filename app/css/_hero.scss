@@ -1,9 +1,10 @@
 .video-player {
 	width: 100vw;
+	height: 80vh;
 }
 .video-player video {
 	min-width: 100%;
 	position: fixed;
-	top: 0;
+	top: -10;
 	z-index: -999;
 }
