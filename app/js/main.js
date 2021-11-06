@@ -1,54 +1,111 @@
+///////////////Age Checker Modal
 $(document).ready(function () {
-	jQuery.validator.addMethod(
-		"twentyone",
-		function (value, element) {
-			var today = new Date(),
-				dd = today.getDate(),
-				mm = today.getMonth() + 1,
-				yyyy = today.getFullYear();
+	if (sessionStorage.getItem("advertOnce") !== "true") {
+		jQuery.validator.addMethod(
+			"twentyone",
+			function (value, element) {
+				var today = new Date(),
+					dd = today.getDate(),
+					mm = today.getMonth() + 1,
+					yyyy = today.getFullYear();
 
-			if ($("#age-select-year").val() == yyyy - 21) {
-				if ($("#age-select-month").val() == mm) {
-					if ($("#age-select-day").val() > dd) {
+				if ($("#age-select-year").val() == yyyy - 21) {
+					if ($("#age-select-month").val() == mm) {
+						if ($("#age-select-day").val() > dd) {
+							return false;
+						} else {
+							return true;
+						}
+					} else if ($("#age-select-month").val() > mm) {
 						return false;
 					} else {
 						return true;
 					}
-				} else if ($("#age-select-month").val() > mm) {
+				} else if ($("#age-select-year").val() > yyyy - 21) {
 					return false;
 				} else {
 					return true;
 				}
-			} else if ($("#age-select-year").val() > yyyy - 21) {
-				return false;
-			} else {
-				return true;
-			}
-		},
-		"You must be 21 years old."
-	);
-
-	$("form").validate({
-		rules: {
-			month: "required",
-			day: "required",
-			year: {
-				required: true,
-				twentyone: true,
 			},
-		},
-		submitHandler: function (form) {
-			$("#age-gate").css("display", "none");
-			$("body").removeClass("noscroll");
-			$("#btnBurger").css("pointer-events", "auto");
-		},
-	});
+			"You must be 21 years old."
+		);
+
+		$("form").validate({
+			rules: {
+				month: "required",
+				day: "required",
+				year: {
+					required: true,
+					twentyone: true,
+				},
+			},
+			submitHandler: function (form) {
+				$("#age-gate").css("display", "none");
+				$("body").removeClass("noscroll");
+				$("#btnBurger").css("pointer-events", "auto");
+				$(".hLink").css("pointer-events", "auto");
+				sessionStorage.setItem("advertOnce", "true");
+			},
+		});
+	} else {
+		$("#age-gate").css("display", "none");
+		$("body").removeClass("noscroll");
+		$("#btnBurger").css("pointer-events", "auto");
+		$(".hLink").css("pointer-events", "auto");
+	}
 });
 
-///////animations
-gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.saveStyles(".myText, .barrels");
+////////slideshow
+window.onload = function () {
+	var slides = document.getElementsByClassName("card"),
+		addActive = function (slide) {
+			slide.classList.add("active");
+		},
+		removeActive = function (slide) {
+			slide.classList.remove("active");
+		};
+	addActive(slides[0]);
 
+	setInterval(function () {
+		for (var i = 0; i < slides.length; i++) {
+			if (i + 1 == slides.length) {
+				addActive(slides[0]);
+				slides[0].style.zIndex = 1000;
+				setTimeout(removeActive, 350, slides[i]);
+				break;
+			}
+			if (slides[i].classList.contains("active")) {
+				slides[i].removeAttribute("style");
+				setTimeout(removeActive, 350, slides[i]);
+				addActive(slides[i + 1]);
+				break;
+			}
+		}
+	}, 3000);
+};
+
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.saveStyles(".myText,.blackLabel, .barrels");
+
+////////Black Label Animations
+let fadeAnim = gsap
+	.from(".blackLabel", {
+		autoAlpha: 1,
+		scrub: 1,
+		duration: 2,
+	})
+	.progress(1);
+
+ScrollTrigger.create({
+	start: "top center",
+	trigger: ".finally",
+	end: "+=100000",
+	onUpdate: (self) => {
+		self.direction === -1 ? fadeAnim.play() : fadeAnim.reverse();
+	},
+});
+
+///////paragraph animations
 ScrollTrigger.matchMedia({
 	// desktop
 	"(min-width: 800px)": function () {

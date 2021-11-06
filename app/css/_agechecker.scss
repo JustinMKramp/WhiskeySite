@@ -1,6 +1,7 @@
 #age-gate {
 	overflow: hidden;
 	max-height: 100px;
+	z-index: 999999999;
 }
 #age-overlay {
 	opacity: 0;
@@ -13,7 +14,7 @@
 	height: 600px;
 	margin-top: 820px;
 	position: fixed;
-	background-color: #2b2b6f;
+	background-color: #3f006f;
 	border-radius: 5px;
 	padding: 1em;
 	border: 1px solid silver;
@@ -72,6 +73,14 @@
 	cursor: pointer;
 	&:hover {
 		opacity: 0.5;
+	}
+}
+.tOS {
+	font-size: 0.5rem;
+	color: whitesmoke;
+	a {
+		color: green;
+		text-decoration: none;
 	}
 }
 @include breakpoint-down(medium) {

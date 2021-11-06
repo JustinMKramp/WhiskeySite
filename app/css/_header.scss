@@ -1,7 +1,7 @@
 .header {
 	z-index: 100000;
 	height: 80px;
-	background-color: #2b2b6f;
+	background-color: #3f006f;
 	position: fixed;
 	width: 100vw;
 	left: 0;
@@ -12,7 +12,7 @@
 	}
 	.logo-head {
 		flex-direction: column;
-		margin-left: 15px;
+		margin-left: 0 15px;
 		.logo-name {
 			margin-left: 1rem;
 			align-self: center;
@@ -44,11 +44,13 @@
 	}
 	.header__links {
 		a {
-			text-decoration: none;
-			color: silver;
-			font-weight: 600;
+			pointer-events: none;
+			font-family: "Coda", cursive;
+			font-size: 1rem;
+			color: whitesmoke;
+			font-weight: 700;
 			margin-right: 2rem;
-			padding: 0.625rem;
+			padding: 0.5rem;
 			text-align: center;
 		}
 	}
@@ -67,8 +69,8 @@
 		}
 	}
 	.header__menu {
-		background: #2b2b6f;
-		width: 50%;
+		background: #3f006f;
+		width: 40%;
 		padding: 1.625rem;
 		position: relative;
 		left: 42%;
@@ -78,9 +80,11 @@
 		z-index: 1000000001;
 		a {
 			display: block;
-			color: silver;
+			font-family: "Coda", cursive;
+			font-size: 1.5rem;
 			font-weight: 600;
-			padding: 0.625rem;
+			color: silver;
+			padding: 1rem;
 			text-align: center;
 			transition: all 0.3s;
 			&:hover {
@@ -109,9 +113,22 @@
 		}
 	}
 }
+
+.buyNow {
+	margin-right: 40px;
+	background: white;
+	img {
+		border-radius: 10px;
+		max-height: 100px;
+		max-width: 300px;
+	}
+}
 @include breakpoint-down(medium) {
 	header {
 		height: 60px;
+		nav {
+			justify-content: space-between !important;
+		}
 		.logo-name {
 			> p {
 				margin: 0 0 20px 0;
@@ -119,7 +136,7 @@
 			}
 		}
 		.logo-head {
-			margin-left: 300px;
+			margin-left: 30px;
 			max-height: 60px;
 			.logo {
 				margin: 0 15px;

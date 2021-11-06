@@ -1,18 +1,16 @@
 .blueBG {
-	background-color: #1a1a64;
+	height: 70vh;
+	background-color: #eee;
+	flex-direction: column;
 	h1 {
-		font-size: 70px;
-		background-color: #eee;
-		padding: 8px 24px;
-		border-radius: 16px;
+		color: whitesmoke;
 	}
 }
-.bottleClose {
-	width: 600px;
-	max-width: 100vw;
-	height: 600px;
-	max-height: 100vh;
-	background-image: url(https://whiskeybucket098.s3.us-east-2.amazonaws.com/glengoolie_barn.jpg);
-	background-size: contain;
-	background-repeat: no-repeat;
+.blackLabel {
+	visibility: hidden;
+	height: 100%;
+	margin-right: 20px;
+	> img {
+		height: 75%;
+	}
 }

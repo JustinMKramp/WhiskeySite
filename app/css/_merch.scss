@@ -1,0 +1,65 @@
+.merch {
+	background: whitesmoke;
+}
+.carousel {
+	position: relative;
+	max-width: 600px;
+	width: 400px;
+	height: 600px;
+	max-width: 800px;
+	max-height: 1000px;
+	overflow: hidden;
+	margin: 0;
+	border: red solid 1px;
+	.card {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 100%;
+		&.active {
+			left: 0;
+			transition: all 0.4 ease-out;
+		}
+		> img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+@media screen and (max-width: 810px) {
+	.merch {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		p {
+			bottom: 90vh;
+			left: 50vw;
+			width: 20rem;
+			font-size: 1.5rem;
+			position: sticky;
+		}
+		.four {
+			top: 0;
+			right: 10vw;
+		}
+	}
+}
+@media screen and (max-width: 500px) {
+	.merch {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		p {
+			top: 0;
+			left: 0;
+			width: 20rem;
+			font-size: 1.5rem;
+		}
+		.four {
+			top: 0;
+			left: 0;
+		}
+	}
+}

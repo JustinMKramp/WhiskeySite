@@ -7,7 +7,11 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Coda&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="app/css/styles.css" />
@@ -190,12 +194,24 @@
 					</div>
 
 					<button class="submit">ENTER</button>
+					<div>
+						<span class="tOS">
+							By entering this site, I agree to the
+							<a href="#">Terms of Service</a> and
+							<a href="#">Privacy Policy</a>.
+						</span>
+					</div>
 				</form>
 			</div>
 		</div>
 
 		<header class="header">
-			<nav class="flex flex-ai-c flex-jc-sb">
+			<nav class="flex flex-ai-c flex-jc-c">
+				<div class="header__links hide-for-tablet flex">
+					<a class="hLink" href="#">Our Story</a>
+					<a class="hLink" href="#">Whisky</a>
+					<a class="hLink" href="#">Cocktails</a>
+				</div>
 				<div class="logo-head flex flex-jc-sb flex-ai-c">
 					<div class="logo">
 						<img
@@ -209,12 +225,9 @@
 					</div>
 				</div>
 				<div class="header__links hide-for-tablet flex">
-					<a href="#">Our Story</a>
-					<a href="#">Whisky</a>
-					<a href="#">Cocktails</a>
-					<a href="#">Careers</a>
-					<a href="#">News</a>
-					<a href="#">Visit Us</a>
+					<a class="hLink" href="#">Careers</a>
+					<a class="hLink" href="#">News</a>
+					<a class="hLink" href="#">Visit Us</a>
 				</div>
 				<a id="btnBurger" class="hmbgr-button hide-for-desktop" href="#">
 					<span></span>
@@ -231,17 +244,28 @@
 				<a href="#">Visit Us</a>
 			</div>
 		</header>
-		<div class="hero video-player container">
+		<div class="hero video-player container flex flex-jc-c flex-ai-c">
+			<div class="hero-text flex flex-jc-c flex-ai-c">
+				<span class="oText">"For the Best of Times"</span>
+			</div>
 			<video id="video_screen" loop playsinline="true" muted="true" autoplay>
 				<source
 					type="video/mp4"
 					src="https://whiskeybucket098.s3.us-east-2.amazonaws.com/heroVideo.mp4"
 				/>
 			</video>
-			<img src="#" alt="" />
 		</div>
-		<div class="blueBG container flex flex-ai-c flex-jc-c">
-			<div class="bottleClose"></div>
+		<div class="blueBG container flex flex-ai-c flex-jc-sb">
+			<div class="finally">
+				<h1>It's finally here!</h1>
+			</div>
+			<div class="blackLabel flex flex-jc-c flex-ai-c">
+				<h2>Glengoolie Black Label</h2>
+				<img
+					src="https://whiskeybucket098.s3.us-east-2.amazonaws.com/blackLabel.png"
+					alt="Glengoolie Black Label"
+				/>
+			</div>
 		</div>
 		<div class="barrels container">
 			<div class="myText">
@@ -259,16 +283,47 @@
 				elit.
 			</div>
 		</div>
-		<div id="tesst" class="pouring container flex">
-			<h1 class="four">4</h1>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum maiores
-				accusamus beatae quidem eaque impedit quas tempora, autem magnam
-				veritatis atque doloremque at ducimus eveniet voluptates dolores ea
-				voluptatibus reprehenderit.
-			</p>
+		<div class="merch container flex">
+			<h1>CHECK OUT THE MERCH</h1>
+			<div class="carousel flex flex-jc-c flex-ai-c">
+				<div class="card">
+					<img
+						src="https://whiskeybucket098.s3.us-east-2.amazonaws.com/goolie_Tblack.jpg"
+						alt=""
+					/>
+				</div>
+				<div class="card">
+					<img
+						src="https://whiskeybucket098.s3.us-east-2.amazonaws.com/goolie_Tblue.jpg"
+						alt=""
+					/>
+				</div>
+				<div class="card">
+					<img
+						src="https://whiskeybucket098.s3.us-east-2.amazonaws.com/goolie_Twhite.jpeg"
+						alt=""
+					/>
+				</div>
+				<div class="card">
+					<img
+						src="https://whiskeybucket098.s3.us-east-2.amazonaws.com/goolie_Sblack.jpeg"
+						alt=""
+					/>
+				</div>
+				<div class="card">
+					<img
+						src="https://whiskeybucket098.s3.us-east-2.amazonaws.com/goolie_Sblue.jpg"
+						alt=""
+					/>
+				</div>
+				<div class="card">
+					<img
+						src="https://whiskeybucket098.s3.us-east-2.amazonaws.com/goolie_Sgray.jpg"
+						alt=""
+					/>
+				</div>
+			</div>
 		</div>
-		<div class="last container"><h1>5</h1></div>
 		<footer class="footer container">
 			<h1>FOOTER</h1>
 		</footer>
