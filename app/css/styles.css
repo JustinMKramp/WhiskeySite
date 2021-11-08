@@ -191,7 +191,7 @@ a {
   height: 600px;
   margin-top: 820px;
   position: fixed;
-  background-color: #3f006f;
+  background-color: #2e366f;
   border-radius: 5px;
   padding: 1em;
   border: 1px solid silver;
@@ -285,7 +285,7 @@ a {
 .header {
   z-index: 100000;
   height: 80px;
-  background-color: #3f006f;
+  background-color: #2e366f;
   position: fixed;
   width: 100vw;
   left: 0;
@@ -502,7 +502,7 @@ a {
 
 @media only screen and (max-width: 26.1875em) {
   .oText {
-    font-size: 2.5rem;
+    font-size: 2rem;
     left: 5%;
   }
 }
