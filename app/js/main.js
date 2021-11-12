@@ -97,7 +97,7 @@ let fadeAnim = gsap
 	.progress(1);
 
 ScrollTrigger.create({
-	start: "top center",
+	start: "bottom center",
 	trigger: ".finally",
 	end: "+=100000",
 	onUpdate: (self) => {
