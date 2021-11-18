@@ -2,17 +2,17 @@
 @media (min-width: 64rem) {
 }
 
-// 420px 820px, 1280px, 1400px
+// 430px 820px, 1280px, 1400px
 $breakpoints-up: (
-	"small": "26.25em",
+	"small": "26.875em",
 	"medium": "51.25em",
 	"large": "80em",
 	"xlarge": "87.5em",
 );
 
-// 420px 819px, 1279px, 1399px
+// 430px 819px, 1279px, 1399px
 $breakpoints-down: (
-	"small": "26.1875em",
+	"small": "26.8125em",
 	"medium": "51.1875em",
 	"large": "79.9375em",
 	"xlarge": "87.4375em",

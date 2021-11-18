@@ -18,20 +18,21 @@
 .oText {
 	font-family: "Petemoss", cursive;
 	color: hsla(47, 96%, 57%, 0.8);
-	font-size: 7rem;
+	font-size: 12rem;
+	text-align: center;
 	text-shadow: 1px 1px 3px black, 1px 1px 5px whitesmoke;
 	z-index: -1;
 }
 
 @include breakpoint-down("medium") {
 	.oText {
-		font-size: 5rem;
+		font-size: 11rem;
 		left: 12%;
 	}
 }
 @include breakpoint-down("small") {
 	.oText {
-		font-size: 2rem;
+		font-size: 5rem;
 		left: 5%;
 	}
 }

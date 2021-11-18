@@ -1,8 +1,10 @@
 @import "mixins";
-* {
+*,
+** {
 	border: 0;
 	padding: 0;
 	margin: 0;
+	font-family: "Cinzel", serif;
 }
 a {
 	text-decoration: none;
@@ -19,7 +21,7 @@ body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.3;
-	font-family: sans-serif;
+	font-family: "Cinzel", serif;
 	&.noscroll {
 		overflow: hidden;
 	}
@@ -29,14 +31,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-weight: 900;
-	font-family: big john;
 	width: 100vw;
 	height: 100vh;
-}
-
-a {
-	text-decoration: none;
 }
 
 // Flexbox
@@ -55,6 +51,9 @@ a {
 	&-ai-c {
 		align-items: center;
 	}
+}
+.grid {
+	display: grid;
 }
 // Visibility
 .hide-for-mobile {

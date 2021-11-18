@@ -1,22 +1,104 @@
 .barrels {
+	width: 100vw;
+	height: 150vh;
+	grid-template-columns: 1fr 1fr;
+}
+.viscen,
+.ourdist {
+	width: 100%;
+	height: 100%;
+	background: #2e366f;
+	> div {
+		flex-direction: column;
+		width: 50%;
+		height: 50%;
+		border: 3px solid white;
+		> span:nth-child(2) {
+			width: 50%;
+			height: 2px;
+			margin: 45px 0;
+			background: #c09949;
+		}
+	}
+}
+.cellar {
+	width: 100%;
+	height: 100%;
 	background-image: url("https://github.com/JustinMKramp/WhiskeySite/raw/main/app/img/barrels2.jpg");
 	background-size: cover;
+	background-repeat: no-repeat;
 }
-.myText {
-	width: 500px;
-	font-size: 1rem;
-	color: gray;
-	background-color: #eee;
-	padding: 8px 24px;
-	margin-bottom: 80px;
-	border-radius: 16px;
+.pots {
+	width: 100%;
+	height: 100%;
+	background-image: url("https://github.com/JustinMKramp/WhiskeySite/raw/main/app/img/copper.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
-@media screen and (max-width: 810px) {
+.vcod {
+	font-size: 2rem;
+	font-weight: bold;
+	color: white;
+}
+.odvc {
+	text-decoration: underline;
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: white;
+}
+
+@include breakpoint-down("large") {
 	.barrels {
-		background-size: cover;
+		height: 100vh;
 	}
-	.myText {
+	.viscen,
+	ourdist {
+		> div {
+			> span:nth-child(2) {
+				margin: 25px 0;
+			}
+		}
+	}
+	.vcod {
+		font-size: 1.6125rem;
+	}
+	.odvc {
+		font-size: 0.9rem;
+	}
+}
+@include breakpoint-down("medium") {
+	.viscen,
+	.ourdist {
+		> div {
+			> span:nth-child(2) {
+				margin: 15px 0;
+			}
+		}
+	}
+	.vcod {
+		font-size: 1.25rem;
+	}
+	.odvc {
 		font-size: 0.75rem;
-		width: 300px;
+	}
+}
+@include breakpoint-down("small") {
+	.barrels {
+		display: flex;
+		flex-direction: column;
+	}
+	.viscen,
+	.ourdist {
+		> div {
+			> span:nth-child(2) {
+				margin: 15px 0;
+			}
+		}
+	}
+	.vcod {
+		font-size: 1.25rem;
+	}
+	.odvc {
+		font-size: 0.75rem;
 	}
 }

@@ -3,7 +3,7 @@
 }
 .carousel {
 	position: relative;
-	max-width: 600px;
+	max-width: 20vw;
 	width: 400px;
 	height: 600px;
 	max-width: 800px;
@@ -28,7 +28,7 @@
 		}
 	}
 }
-@media screen and (max-width: 810px) {
+@include breakpoint-down("medium") {
 	.merch {
 		flex-direction: column;
 		align-items: center;
@@ -46,7 +46,7 @@
 		}
 	}
 }
-@media screen and (max-width: 500px) {
+@include breakpoint-down("small") {
 	.merch {
 		flex-direction: column;
 		align-items: center;
@@ -61,5 +61,8 @@
 			top: 0;
 			left: 0;
 		}
+	}
+	.carousel {
+		max-width: 75%;
 	}
 }

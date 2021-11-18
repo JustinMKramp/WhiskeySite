@@ -3,46 +3,99 @@
 	background-color: hsl(39, 85%, 95%);
 	flex-direction: column;
 }
-
 .quote {
 	margin-top: 32px;
-	max-width: 1100px;
+	max-width: 80%;
 	flex-direction: column;
-	font-family: Cinzel, serif;
 	font-style: normal;
 	font-weight: bold;
 	text-align: center;
 	color: #000000;
 	span:first-of-type {
-		font-size: 32px;
+		font-size: 2rem;
 	}
 	span:last-of-type {
-		font-size: 18px;
-	}
-}
-.globe {
-	max-width: 600px;
-	span {
-		font-family: Cinzel, serif;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 18px;
-	}
-}
-.barn {
-	img {
-		max-width: 340px;
+		font-size: 1.125rem;
 	}
 }
 
-@media screen and (max-width: 810px) {
-	p {
-		font-size: 1rem;
-		width: 300px;
+.globe {
+	padding-left: 30px;
+	max-width: 50%;
+	span {
+		font-weight: normal;
+		font-size: 1.125rem;
+		span {
+			font-weight: bolder;
+			font-size: 2.125rem;
+		}
 	}
 }
-@media screen and (max-width: 500px) {
-	p {
-		font-size: 0.75rem;
+.barn {
+	text-align: center;
+	img {
+		max-width: 70%;
+	}
+}
+
+@include breakpoint-down("large") {
+	.globe {
+		span {
+			font-size: 1.1rem;
+			span {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+@include breakpoint-down("medium") {
+	.quote {
+		span:first-of-type {
+			font-size: 1.5rem;
+		}
+		span:last-of-type {
+			font-size: 0.875rem;
+		}
+	}
+	.globe {
+		span {
+			font-size: 1rem;
+			span {
+				font-size: 1.8125rem;
+			}
+		}
+	}
+	.barn {
+		img {
+			max-width: 90%;
+		}
+	}
+}
+@include breakpoint-down("small") {
+	.two {
+		div:nth-child(2) {
+			flex-direction: column;
+		}
+	}
+	.quote {
+		max-width: 95%;
+		span:first-of-type {
+			font-size: 1rem;
+		}
+		span:last-of-type {
+			font-size: 0.4rem;
+		}
+	}
+	.globe {
+		margin: 0;
+		max-width: 95%;
+		span {
+			font-size: 0.75rem;
+		}
+	}
+	.barn {
+		img {
+			max-width: 75%;
+		}
 	}
 }
