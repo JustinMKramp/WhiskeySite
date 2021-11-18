@@ -541,7 +541,7 @@ body.noscroll {
 }
 
 .globe {
-  padding-left: 30px;
+  padding-right: 30px;
   max-width: 50%;
 }
 
@@ -731,20 +731,138 @@ body.noscroll {
   }
 }
 
+.blacklabel {
+  background: oldlace;
+  height: 70vh;
+  position: relative;
+}
+
+.blpic img {
+  width: 95%;
+  height: 65vh;
+}
+
+.blpic a {
+  background: white;
+  color: #2e366f;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0 5px;
+  border: 1px solid white;
+  border-radius: 3px;
+  position: absolute;
+  top: 23%;
+  right: 12%;
+}
+
+.bltext {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50vw;
+}
+
+.bltext span:first-of-type {
+  font-size: 6.5rem;
+  font-weight: 900;
+}
+
+.bltext span:nth-child(2) {
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-top: 30px;
+}
+
+.bltext span:last-of-type {
+  max-width: 75%;
+  font-size: 1.25rem;
+}
+
+.bltext span:last-of-type:first-letter {
+  font-size: 2.25rem;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 79.9375em) {
+  .bltext span:first-of-type {
+    font-size: 4.5rem;
+  }
+  .bltext span:nth-child(2) {
+    font-size: 2.25rem;
+  }
+  .bltext span:last-of-type {
+    font-size: 1.125rem;
+  }
+  .bltext span:last-of-type::first-letter {
+    font-size: 2.125rem;
+  }
+  .blpic img {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 51.1875em) {
+  .bltext span:first-of-type {
+    font-size: 3.5rem;
+  }
+  .bltext span:nth-child(2) {
+    font-size: 1.5rem;
+  }
+  .bltext span:last-of-type {
+    font-size: 1rem;
+  }
+  .bltext span:last-of-type::first-letter {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 26.8125em) {
+  .blacklabel {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bltext {
+    width: 90%;
+  }
+  .bltext span:first-of-type {
+    font-size: 2.5rem;
+  }
+  .bltext span:nth-child(2) {
+    padding: 0;
+  }
+  .bltext span:last-of-type {
+    font-size: 0.5rem;
+    width: 80%;
+  }
+  .bltext span:last-of-type::first-letter {
+    font-size: 1rem;
+  }
+  .blpic a {
+    top: 35%;
+    right: 25%;
+  }
+}
+
 .merch {
   background: whitesmoke;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .carousel {
   position: relative;
-  max-width: 20vw;
-  width: 400px;
-  height: 600px;
-  max-width: 800px;
-  max-height: 1000px;
+  width: 500px;
+  height: 800px;
+  max-width: 75%;
+  max-height: 75%;
   overflow: hidden;
   margin: 0;
-  border: red solid 1px;
+  border: black solid 1px;
 }
 
 .carousel .card {
@@ -770,10 +888,6 @@ body.noscroll {
 
 @media only screen and (max-width: 51.1875em) {
   .merch {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -819,7 +933,8 @@ body.noscroll {
     left: 0;
   }
   .carousel {
-    max-width: 75%;
+    max-width: 95%;
+    max-height: 50%;
   }
 }
 

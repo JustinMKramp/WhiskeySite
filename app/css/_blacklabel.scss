@@ -1,0 +1,109 @@
+.blacklabel {
+	background: oldlace;
+	height: 70vh;
+	position: relative;
+}
+.blpic {
+	img {
+		width: 95%;
+		height: 65vh;
+	}
+	a {
+		background: white;
+		color: #2e366f;
+		font-size: 1.5rem;
+		font-weight: 700;
+		padding: 0 5px;
+		border: 1px solid white;
+		border-radius: 3px;
+		position: absolute;
+		top: 23%;
+		right: 12%;
+	}
+}
+.bltext {
+	flex-direction: column;
+	width: 50vw;
+	span:first-of-type {
+		font-size: 6.5rem;
+		font-weight: 900;
+	}
+	span:nth-child(2) {
+		font-size: 2.5rem;
+		font-weight: 600;
+		padding-top: 30px;
+	}
+	span:last-of-type {
+		max-width: 75%;
+		font-size: 1.25rem;
+		&:first-letter {
+			font-size: 2.25rem;
+			font-weight: 900;
+		}
+	}
+}
+
+@include breakpoint-down("large") {
+	.bltext {
+		span:first-of-type {
+			font-size: 4.5rem;
+		}
+		span:nth-child(2) {
+			font-size: 2.25rem;
+		}
+		span:last-of-type {
+			font-size: 1.125rem;
+			&::first-letter {
+				font-size: 2.125rem;
+			}
+		}
+	}
+	.blpic {
+		img {
+			height: 50vh;
+		}
+	}
+}
+@include breakpoint-down("medium") {
+	.bltext {
+		span:first-of-type {
+			font-size: 3.5rem;
+		}
+		span:nth-child(2) {
+			font-size: 1.5rem;
+		}
+		span:last-of-type {
+			font-size: 1rem;
+			&::first-letter {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+@include breakpoint-down("small") {
+	.blacklabel {
+		flex-direction: column;
+	}
+	.bltext {
+		width: 90%;
+		span:first-of-type {
+			font-size: 2.5rem;
+		}
+		span:nth-child(2) {
+			padding: 0;
+		}
+		span:last-of-type {
+			font-size: 0.5rem;
+			width: 80%;
+			&::first-letter {
+				font-size: 1rem;
+			}
+		}
+	}
+	.blpic {
+		a {
+			top: 35%;
+			right: 25%;
+		}
+	}
+}

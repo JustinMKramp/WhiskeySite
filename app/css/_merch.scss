@@ -1,16 +1,16 @@
 .merch {
 	background: whitesmoke;
+	flex-direction: column;
 }
 .carousel {
 	position: relative;
-	max-width: 20vw;
-	width: 400px;
-	height: 600px;
-	max-width: 800px;
-	max-height: 1000px;
+	width: 500px;
+	height: 800px;
+	max-width: 75%;
+	max-height: 75%;
 	overflow: hidden;
 	margin: 0;
-	border: red solid 1px;
+	border: black solid 1px;
 	.card {
 		position: absolute;
 		width: 100%;
@@ -30,7 +30,6 @@
 }
 @include breakpoint-down("medium") {
 	.merch {
-		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		p {
@@ -63,6 +62,7 @@
 		}
 	}
 	.carousel {
-		max-width: 75%;
+		max-width: 95%;
+		max-height: 50%;
 	}
 }
