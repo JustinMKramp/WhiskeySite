@@ -55,6 +55,31 @@ $(document).ready(function () {
 	}
 });
 
+//hamburger controls
+const btnBurger = document.querySelector("#btnBurger");
+const body = document.querySelector("body");
+const header = document.querySelector(".header");
+const fadeElems = document.querySelectorAll(".has-fade");
+
+btnBurger.addEventListener("click", function () {
+	if (header.classList.contains("open")) {
+		body.classList.remove("noscroll");
+		header.classList.remove("open");
+		fadeElems.forEach(function (element) {
+			element.classList.remove("fade-in");
+			element.classList.add("fade-out");
+		});
+	} else {
+		header.classList.add("open");
+		fadeElems.forEach(function (element) {
+			body.classList.add("noscroll");
+			element.classList.add("fade-in");
+			element.classList.remove("fade-out");
+			element.classList.remove("has-fade");
+		});
+	}
+});
+
 ////////slideshow
 window.onload = function () {
 	var slides = document.getElementsByClassName("card"),
@@ -83,27 +108,6 @@ window.onload = function () {
 		}
 	}, 3000);
 };
-
-gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.saveStyles(".myText,.blackLabel, .barrels");
-
-////////Black Label Animations
-let fadeAnim = gsap
-	.from(".blackLabel", {
-		autoAlpha: 1,
-		scrub: 1,
-		duration: 2,
-	})
-	.progress(1);
-
-ScrollTrigger.create({
-	start: "bottom center",
-	trigger: ".finally",
-	end: "+=100000",
-	onUpdate: (self) => {
-		self.direction === -1 ? fadeAnim.play() : fadeAnim.reverse();
-	},
-});
 
 ///////paragraph animations
 ScrollTrigger.matchMedia({
@@ -137,29 +141,4 @@ ScrollTrigger.create({
 	onUpdate: (self) => {
 		self.direction === -1 ? showAnim.play() : showAnim.reverse();
 	},
-});
-
-//hamburger controls
-const btnBurger = document.querySelector("#btnBurger");
-const body = document.querySelector("body");
-const header = document.querySelector(".header");
-const fadeElems = document.querySelectorAll(".has-fade");
-
-btnBurger.addEventListener("click", function () {
-	if (header.classList.contains("open")) {
-		body.classList.remove("noscroll");
-		header.classList.remove("open");
-		fadeElems.forEach(function (element) {
-			element.classList.remove("fade-in");
-			element.classList.add("fade-out");
-		});
-	} else {
-		header.classList.add("open");
-		fadeElems.forEach(function (element) {
-			body.classList.add("noscroll");
-			element.classList.add("fade-in");
-			element.classList.remove("fade-out");
-			element.classList.remove("has-fade");
-		});
-	}
 });

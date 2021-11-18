@@ -7,11 +7,15 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Coda&display=swap"
 			rel="stylesheet"
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Coda&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="app/css/styles.css" />
@@ -206,11 +210,16 @@
 		</div>
 
 		<header class="header">
-			<nav class="flex flex-ai-c flex-jc-c">
-				<div class="header__links hide-for-tablet flex">
-					<a class="hLink" href="#">Our Story</a>
-					<a class="hLink" href="#">Whisky</a>
-					<a class="hLink" href="#">Cocktails</a>
+			<nav class="flex flex-ai-c flex-jc-sb">
+				<div
+					class="header__links hide-for-tablet flex flex-jc-c"
+					style="margin-left: 20px"
+				>
+					<ul class="flex flex-jc-sb">
+						<li><a class="hLink" href="#">Our Story</a></li>
+						<li><a class="hLink" href="#">Whisky</a></li>
+						<li><a class="hLink" href="#">Cocktails</a></li>
+					</ul>
 				</div>
 				<div class="logo-head flex flex-jc-sb flex-ai-c">
 					<div class="logo">
@@ -221,13 +230,15 @@
 						/>
 					</div>
 					<div class="logo-name">
-						<p>GLENGOOLI<span class="last-letter">E</span></p>
+						<span>GLENGOOLI<span class="last-letter">E</span></span>
 					</div>
 				</div>
-				<div class="header__links hide-for-tablet flex">
-					<a class="hLink" href="#">Careers</a>
-					<a class="hLink" href="#">News</a>
-					<a class="hLink" href="#">Visit Us</a>
+				<div class="header__links hide-for-tablet flex flex-jc-c">
+					<ul class="flex flex-jc-sb">
+						<li><a class="hLink" href="#">Careers</a></li>
+						<li><a class="hLink" href="#">News</a></li>
+						<li><a class="hLink" href="#">Visit Us</a></li>
+					</ul>
 				</div>
 				<a id="btnBurger" class="hmbgr-button hide-for-desktop" href="#">
 					<span></span>
@@ -255,16 +266,15 @@
 				/>
 			</video>
 		</div>
-		<div class="blueBG container flex flex-ai-c flex-jc-sb">
-			<div class="finally">
-				<h1>It's finally here!</h1>
+		<div class="two container flex flex-jc-c flex-ai-c">
+			<div class="quote flex"><span>“There is no bad whisky. 
+				There are only some whiskys that aren’t as good as others.”</span>
+			<span>-raymond chandler</span></div>
+			<div class="container flex flex-jc-sa flex-ai-c">
+				<div class="globe"><span>Tucked between the valleys of the Scottish lowlands, deep within the thick bush lies one of the worlds best kept secrets to have ever graced a persons lips. Combining organically grown barely from some of the most fertile lands in the world, pristine waters sullied by no man, unadulterated venerable yeast cultures, and aged in the finest virgin white oak barrels Glengoolie is the premier choice of whisky drinkers around the globe.</span></div>
+				<div class="barn"><img src="https://github.com/JustinMKramp/WhiskeySite/raw/main/app/img/glengoolie_barn.jpg" alt=""></div>
 			</div>
-			<div class="blackLabel flex flex-jc-c flex-ai-c">
-				<h2>Glengoolie Black Label</h2>
-				<img
-					src="https://github.com/JustinMKramp/WhiskeySite/raw/main/app/img/blackLabel.png"
-					alt="Glengoolie Black Label"
-				/>
+			
 			</div>
 		</div>
 		<div class="barrels container">

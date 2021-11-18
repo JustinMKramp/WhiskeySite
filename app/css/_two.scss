@@ -1,0 +1,48 @@
+.two {
+	height: 70vh;
+	background-color: hsl(39, 85%, 95%);
+	flex-direction: column;
+}
+
+.quote {
+	margin-top: 32px;
+	max-width: 1100px;
+	flex-direction: column;
+	font-family: Cinzel, serif;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+	span:first-of-type {
+		font-size: 32px;
+	}
+	span:last-of-type {
+		font-size: 18px;
+	}
+}
+.globe {
+	max-width: 600px;
+	span {
+		font-family: Cinzel, serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+	}
+}
+.barn {
+	img {
+		max-width: 340px;
+	}
+}
+
+@media screen and (max-width: 810px) {
+	p {
+		font-size: 1rem;
+		width: 300px;
+	}
+}
+@media screen and (max-width: 500px) {
+	p {
+		font-size: 0.75rem;
+	}
+}

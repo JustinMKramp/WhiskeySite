@@ -7,6 +7,9 @@
 a {
 	text-decoration: none;
 }
+li {
+	text-decoration: none;
+}
 html {
 	font-size: 100%;
 	box-sizing: border-box;
@@ -28,7 +31,7 @@ body {
 	justify-content: center;
 	font-weight: 900;
 	font-family: big john;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 }
 
