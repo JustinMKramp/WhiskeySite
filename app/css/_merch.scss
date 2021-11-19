@@ -4,7 +4,7 @@
 }
 .carousel {
 	position: relative;
-	width: 500px;
+	width: 1fr;
 	height: 800px;
 	max-width: 75%;
 	max-height: 75%;
@@ -26,6 +26,20 @@
 			width: 100%;
 			height: 100%;
 		}
+	}
+}
+.shot {
+	width: 1fr;
+	text-align: center;
+	img {
+		width: 50%;
+	}
+}
+.etched {
+	width: 1fr;
+	text-align: center;
+	img {
+		width: 50%;
 	}
 }
 @include breakpoint-down("medium") {
