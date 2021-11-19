@@ -1,13 +1,12 @@
 .merch {
 	background: whitesmoke;
 	flex-direction: column;
+	height: 70vh;
 }
 .carousel {
 	position: relative;
-	width: 1fr;
-	height: 800px;
-	max-width: 75%;
-	max-height: 75%;
+	width: 50%;
+	height: 65%;
 	overflow: hidden;
 	margin: 0;
 	border: black solid 1px;
@@ -28,55 +27,64 @@
 		}
 	}
 }
+.merchpics {
+	height: 65vh;
+	flex-direction: column;
+}
+.glass {
+	height: 25%;
+	margin-bottom: 16px;
+}
 .shot {
-	width: 1fr;
 	text-align: center;
 	img {
-		width: 50%;
+		box-shadow: 3px 3px 10px #757cae;
+		height: 100%;
+	}
+}
+.shopnow {
+	width: 300px;
+	margin: 25px 0 0 12px;
+	a {
+		text-decoration: none;
+		background: #2e366f;
+		color: whitesmoke;
+		box-shadow: 1px 7px 7px #757cae;
+		font-size: 3rem;
+		font-weight: 900;
+		padding: 8px;
 	}
 }
 .etched {
-	width: 1fr;
 	text-align: center;
 	img {
-		width: 50%;
+		box-shadow: -3px 3px 10px #757cae;
+		height: 100%;
+	}
+}
+@include breakpoint-down("large") {
+	.shot,
+	.etched {
+		width: 27%;
 	}
 }
 @include breakpoint-down("medium") {
-	.merch {
-		align-items: center;
-		justify-content: center;
-		p {
-			bottom: 90vh;
-			left: 50vw;
-			width: 20rem;
-			font-size: 1.5rem;
-			position: sticky;
-		}
-		.four {
-			top: 0;
-			right: 10vw;
-		}
+	.shot {
+		width: 22%;
+	}
+	.etched {
+		width: 18%;
 	}
 }
 @include breakpoint-down("small") {
-	.merch {
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		p {
-			top: 0;
-			left: 0;
-			width: 20rem;
-			font-size: 1.5rem;
-		}
-		.four {
-			top: 0;
-			left: 0;
-		}
-	}
 	.carousel {
-		max-width: 95%;
-		max-height: 50%;
+		width: 100%;
+		height: 80%;
+	}
+	.shot {
+		display: none;
+	}
+	.etched {
+		display: none;
 	}
 }

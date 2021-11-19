@@ -4,21 +4,22 @@
 	position: relative;
 }
 .blpic {
+	text-align: center;
+	flex-direction: column;
 	img {
 		width: 95%;
-		height: 65vh;
+		height: 50vh;
+		box-shadow: 5px 2px 5px gray;
 	}
 	a {
 		background: white;
 		color: #2e366f;
-		font-size: 1.5rem;
+		font-size: 2rem;
 		font-weight: 700;
+		margin-top: 25px;
 		padding: 0 5px;
-		border: 1px solid white;
+		border: 1px solid black;
 		border-radius: 3px;
-		position: absolute;
-		top: 23%;
-		right: 12%;
 	}
 }
 .bltext {
@@ -27,10 +28,11 @@
 	span:first-of-type {
 		font-size: 6.5rem;
 		font-weight: 900;
+		color: #666;
 	}
 	span:nth-child(2) {
 		font-size: 2.5rem;
-		font-weight: 600;
+		font-weight: 700;
 		padding-top: 30px;
 	}
 	span:last-of-type {
@@ -101,9 +103,12 @@
 		}
 	}
 	.blpic {
+		height: 50vh;
+		img {
+			width: 75%;
+		}
 		a {
-			top: 35%;
-			right: 25%;
+			margin: 10px 0;
 		}
 	}
 }
