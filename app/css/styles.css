@@ -193,8 +193,8 @@ body.noscroll {
 #age-content {
   width: 50vw;
   max-width: 600px;
-  height: 600px;
-  margin-top: 100px;
+  height: 65vh;
+  margin-top: 420px;
   position: fixed;
   background-color: #2e366f;
   border-radius: 5px;
@@ -215,8 +215,8 @@ body.noscroll {
 }
 
 .age-logo img {
-  width: 80%;
-  height: 90%;
+  width: 65%;
+  height: 80%;
 }
 
 .please {
