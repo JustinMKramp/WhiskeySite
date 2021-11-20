@@ -9,11 +9,10 @@
 	background-repeat: repeat;
 }
 #age-content {
-	width: 50vw;
-	max-width: 600px;
-	height: 65vh;
-	margin-top: 420px;
-	position: fixed;
+	top: 10%;
+	width: 35%;
+	height: 70%;
+	position: absolute;
 	background-color: #2e366f;
 	border-radius: 5px;
 	padding: 1em;
@@ -83,7 +82,7 @@
 		text-decoration: none;
 	}
 }
-@include breakpoint-down(medium) {
+@include breakpoint-down("medium") {
 	#age-content {
 		width: 90vw;
 	}

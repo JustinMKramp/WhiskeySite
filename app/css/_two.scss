@@ -75,6 +75,7 @@
 	.two {
 		div:nth-child(2) {
 			flex-direction: column;
+			height: 75%;
 		}
 	}
 	.quote {
@@ -95,8 +96,9 @@
 		}
 	}
 	.barn {
+		height: 50%;
 		img {
-			max-width: 75%;
+			height: 100%;
 		}
 	}
 }

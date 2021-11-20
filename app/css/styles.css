@@ -191,11 +191,10 @@ body.noscroll {
 }
 
 #age-content {
-  width: 50vw;
-  max-width: 600px;
-  height: 65vh;
-  margin-top: 420px;
-  position: fixed;
+  top: 10%;
+  width: 35%;
+  height: 70%;
+  position: absolute;
   background-color: #2e366f;
   border-radius: 5px;
   padding: 1em;
@@ -596,6 +595,7 @@ body.noscroll {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 75%;
   }
   .quote {
     max-width: 95%;
@@ -614,8 +614,11 @@ body.noscroll {
   .globe span {
     font-size: 0.75rem;
   }
+  .barn {
+    height: 50%;
+  }
   .barn img {
-    max-width: 75%;
+    height: 100%;
   }
 }
 
@@ -744,11 +747,12 @@ body.noscroll {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 45vw;
 }
 
 .blpic img {
-  width: 95%;
-  height: 50vh;
+  width: 40%;
+  height: 75%;
   -webkit-box-shadow: 5px 2px 5px gray;
           box-shadow: 5px 2px 5px gray;
 }
@@ -769,7 +773,7 @@ body.noscroll {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50vw;
+  width: 45vw;
 }
 
 .bltext span:first-of-type {
@@ -796,25 +800,28 @@ body.noscroll {
 
 @media only screen and (max-width: 79.9375em) {
   .bltext span:first-of-type {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
   .bltext span:nth-child(2) {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .bltext span:last-of-type {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   .bltext span:last-of-type::first-letter {
     font-size: 2.125rem;
   }
   .blpic img {
-    height: 50vh;
+    width: 90%;
   }
 }
 
 @media only screen and (max-width: 51.1875em) {
+  .blacklabel {
+    height: 85vh;
+  }
   .bltext span:first-of-type {
-    font-size: 3.5rem;
+    font-size: 3.25rem;
   }
   .bltext span:nth-child(2) {
     font-size: 1.5rem;
@@ -838,10 +845,11 @@ body.noscroll {
     width: 90%;
   }
   .bltext span:first-of-type {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .bltext span:nth-child(2) {
     padding: 0;
+    font-size: 1.125rem;
   }
   .bltext span:last-of-type {
     font-size: 0.5rem;
@@ -851,13 +859,16 @@ body.noscroll {
     font-size: 1rem;
   }
   .blpic {
-    height: 50vh;
+    height: 75%;
+    width: 100vw;
   }
   .blpic img {
-    width: 75%;
+    width: 55%;
+    height: 80%;
   }
   .blpic a {
     margin: 10px 0;
+    font-size: 1rem;
   }
 }
 

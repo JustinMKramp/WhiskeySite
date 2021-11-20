@@ -6,9 +6,10 @@
 .blpic {
 	text-align: center;
 	flex-direction: column;
+	width: 45vw;
 	img {
-		width: 95%;
-		height: 50vh;
+		width: 40%;
+		height: 75%;
 		box-shadow: 5px 2px 5px gray;
 	}
 	a {
@@ -24,7 +25,7 @@
 }
 .bltext {
 	flex-direction: column;
-	width: 50vw;
+	width: 45vw;
 	span:first-of-type {
 		font-size: 6.5rem;
 		font-weight: 900;
@@ -48,13 +49,13 @@
 @include breakpoint-down("large") {
 	.bltext {
 		span:first-of-type {
-			font-size: 4.5rem;
+			font-size: 4rem;
 		}
 		span:nth-child(2) {
-			font-size: 2.25rem;
+			font-size: 2rem;
 		}
 		span:last-of-type {
-			font-size: 1.125rem;
+			font-size: 1rem;
 			&::first-letter {
 				font-size: 2.125rem;
 			}
@@ -62,14 +63,17 @@
 	}
 	.blpic {
 		img {
-			height: 50vh;
+			width: 90%;
 		}
 	}
 }
 @include breakpoint-down("medium") {
+	.blacklabel {
+		height: 85vh;
+	}
 	.bltext {
 		span:first-of-type {
-			font-size: 3.5rem;
+			font-size: 3.25rem;
 		}
 		span:nth-child(2) {
 			font-size: 1.5rem;
@@ -89,10 +93,11 @@
 	.bltext {
 		width: 90%;
 		span:first-of-type {
-			font-size: 2.5rem;
+			font-size: 2rem;
 		}
 		span:nth-child(2) {
 			padding: 0;
+			font-size: 1.125rem;
 		}
 		span:last-of-type {
 			font-size: 0.5rem;
@@ -103,12 +108,15 @@
 		}
 	}
 	.blpic {
-		height: 50vh;
+		height: 75%;
+		width: 100vw;
 		img {
-			width: 75%;
+			width: 55%;
+			height: 80%;
 		}
 		a {
 			margin: 10px 0;
+			font-size: 1rem;
 		}
 	}
 }
