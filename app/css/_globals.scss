@@ -52,6 +52,9 @@ body {
 		align-items: center;
 	}
 }
+.column {
+	flex-direction: column;
+}
 .grid {
 	display: grid;
 }

@@ -74,6 +74,13 @@ body.noscroll {
           align-items: center;
 }
 
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .grid {
   display: -ms-grid;
   display: grid;
@@ -990,6 +997,106 @@ body.noscroll {
 }
 
 .footer {
-  background-color: silver;
+  height: 40vw;
+  background-color: #2e366f;
+}
+
+.footer-box {
+  width: 100vw;
+}
+
+.logo-footer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.logo-footer .logo-name {
+  margin-left: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.logo-footer .logo-name > span {
+  color: whitesmoke;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.logo-footer .logo-name > span .first-letter,
+.logo-footer .logo-name > span .last-letter {
+  font-size: 2.5rem;
+}
+
+.logo-footer .logo .bull {
+  position: relative;
+  max-width: 120px;
+  max-height: 80px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.flink {
+  font-family: "Coda", sans-serif;
+  color: white;
+  font-size: 1rem;
+}
+
+.footer-contact a {
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  font-family: "Coda", sans-serif;
+  margin-bottom: 20px;
+}
+
+.footer-contact i {
+  color: white;
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+.responsible p {
+  font-size: 0.5rem;
+}
+
+.responsible p a {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 51.1875em) {
+  .footer-contact a {
+    font-size: 2rem;
+  }
+  .footer-contact i {
+    font-size: 1.5rem;
+  }
+  .flink {
+    font-size: 0.75rem;
+  }
+  .logo-name > span {
+    font-size: 1.75rem;
+  }
+  .logo-name > span .first-letter,
+  .logo-name > span .last-letter {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 26.8125em) {
+  .footer {
+    height: 70vh;
+  }
+  .footer-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

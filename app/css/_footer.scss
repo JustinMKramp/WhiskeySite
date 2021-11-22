@@ -1,3 +1,91 @@
 .footer {
-	background-color: silver;
+	height: 40vw;
+	background-color: #2e366f;
+}
+.footer-box {
+	width: 100vw;
+}
+.logo-footer {
+	flex-direction: column;
+	.logo-name {
+		margin-left: 1rem;
+		align-self: center;
+		> span {
+			color: whitesmoke;
+			font-weight: 700;
+			font-size: 2rem;
+			line-height: 1;
+			.first-letter,
+			.last-letter {
+				font-size: 2.5rem;
+			}
+		}
+	}
+	.logo {
+		.bull {
+			position: relative;
+			max-width: 120px;
+			max-height: 80px;
+		}
+	}
+}
+.footer-links {
+	list-style: none;
+}
+.flink {
+	font-family: "Coda", sans-serif;
+	color: white;
+	font-size: 1rem;
+}
+.footer-contact {
+	a {
+		color: white;
+		text-decoration: none;
+		font-size: 3rem;
+		font-family: "Coda", sans-serif;
+		margin-bottom: 20px;
+	}
+	i {
+		color: white;
+		font-size: 2rem;
+		margin: 0 10px;
+	}
+}
+.responsible {
+	p {
+		font-size: 0.5rem;
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+@include breakpoint-down("medium") {
+	.footer-contact {
+		a {
+			font-size: 2rem;
+		}
+		i {
+			font-size: 1.5rem;
+		}
+	}
+	.flink {
+		font-size: 0.75rem;
+	}
+	.logo-name {
+		> span {
+			font-size: 1.75rem;
+			.first-letter,
+			.last-letter {
+				font-size: 2.25rem;
+			}
+		}
+	}
+}
+@include breakpoint-down("small") {
+	.footer {
+		height: 70vh;
+	}
+	.footer-box {
+		flex-direction: column;
+	}
 }
